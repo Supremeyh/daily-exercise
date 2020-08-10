@@ -1,0 +1,65 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Canvas</title>
+  <style>
+    .myCanvas {
+      border: 1px solid rosybrown;
+      /* width: 200px;
+      height: 200px; */
+    }
+    .img {
+      /* width: 100px;
+      height: 100px; */
+    }
+    .content {
+      width: 100px;
+      height: 100px;
+      background: url(#'./chopper.jpg');
+    }
+  </style>
+</head>
+<body>
+
+  <div class="wrap">
+    <div class="content"></div>
+    <!-- <img class="img" id="img" src="./chopper.jpg" alt="chopper" width="150" height="150"></img>
+
+    <canvas class="myCanvas" id="myCanvas" width="200" height="200">canvas</canvas>
+  </div> -->
+
+  <script>
+    const canvas = document.getElementById('myCanvas');
+    const ctx = canvas.getContext('2d');
+
+    const img = document.getElementById('img');
+
+    window.onload = function() {
+      ctx.drawImage(img, 0, 0);
+    }
+
+    // const grd = ctx.createLinearGradient(0, 10, 100, 100);
+    // grd.addColorStop(0, '#f0f');
+    // grd.addColorStop(1, 'yellow');
+    // ctx.fillStyle = grd;
+    // ctx.fillRect(20, 20, 150 , 120);
+    // ctx.fillStyle = '#f00';
+    // ctx.fillRect(20 ,20 , 150, 100);
+
+    // ctx.moveTo(0, 0);
+    // ctx.lineTo(200, 200);
+    // ctx.stroke();
+
+    // ctx.font = '30px Arial';
+    // ctx.strokeText('Hello Fri', 50 ,100);
+
+
+    // ctx.beginPath();
+    // ctx.arc(100, 100, 50, 0, 10)
+    // ctx.stroke();
+
+
+  </script>
+</body>
+</html>
